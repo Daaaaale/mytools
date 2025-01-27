@@ -6,7 +6,7 @@
 \usage{
 ddsave(
   plot = ggplot2::last_plot(),
-  filename,
+  filename = "lastplot",
   width = 7,
   height = 7,
   units = "cm",
@@ -18,7 +18,7 @@ ddsave(
 \arguments{
 \item{plot}{要保存的图形对象（如 \code{ggplot2} 对象）。默认值为 \code{ggplot2::last_plot()}，即最近创建的 \code{ggplot2} 图形。}
 
-\item{filename}{文件名（不带扩展名）。文件将保存到指定路径，路径中的文件夹如果不存在会自动创建。}
+\item{filename}{文件名（不带扩展名），默认为lastplot。文件将保存到指定路径，路径中的文件夹如果不存在会自动创建。}
 
 \item{width}{图形的宽度，默认值为 7。}
 

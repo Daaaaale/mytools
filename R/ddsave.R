@@ -6,7 +6,7 @@
 #' 用户可以通过 `formats` 参数指定需要保存的格式。
 #'
 #' @param plot 要保存的图形对象（如 `ggplot2` 对象）。默认值为 `ggplot2::last_plot()`，即最近创建的 `ggplot2` 图形。
-#' @param filename 文件名（不带扩展名）。文件将保存到指定路径，路径中的文件夹如果不存在会自动创建。
+#' @param filename 文件名（不带扩展名），默认为lastplot。文件将保存到指定路径，路径中的文件夹如果不存在会自动创建。
 #' @param width 图形的宽度，默认值为 7。
 #' @param height 图形的高度，默认值为 7。
 #' @param units 宽度和高度的单位，支持 `"cm"`（厘米，默认）、`"in"`（英寸）和 `"px"`（像素）。
@@ -31,7 +31,7 @@
 #' }
 #'
 #' @export
-ddsave <- function(plot = ggplot2::last_plot(), filename, width = 7, height = 7, units = "cm", dpi = 600, path = NULL, formats = c("pdf", "png", "jpeg")) {
+ddsave <- function(plot = ggplot2::last_plot(), filename = "lastplot", width = 7, height = 7, units = "cm", dpi = 600, path = NULL, formats = c("pdf", "png", "jpeg")) {
   # 检查 ggplot2 是否已加载
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("请安装并加载 ggplot2 包：install.packages('ggplot2')")
