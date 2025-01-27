@@ -31,7 +31,7 @@
 #' }
 #'
 #' @export
-ddsave <- function(plot = ggplot2::last_plot(), filename = "lastplot", width = 7, height = 7, units = "cm", dpi = 600, path = NULL, formats = c("pdf", "png", "jpeg")) {
+ddsave <- function(plot = ggplot2::last_plot(), filename, width = 7, height = 7, units = "cm", dpi = 600, path = NULL, formats = c("pdf", "png", "jpeg")) {
   # 检查 ggplot2 是否已加载
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("请安装并加载 ggplot2 包：install.packages('ggplot2')")
